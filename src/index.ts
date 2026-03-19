@@ -139,6 +139,31 @@ export interface HistoryTotalResponse {
 }
 
 // =============================================================================
+// Restaurant
+// =============================================================================
+
+/**
+ * A restaurant result returned from the search endpoint.
+ *
+ * @example
+ * ```typescript
+ * const restaurant: Restaurant = {
+ *   name: 'Tacos El Gordo',
+ *   address: '123 Main St, San Francisco, CA',
+ *   distance: '0.3 mi',
+ * };
+ * ```
+ */
+export interface Restaurant {
+  /** Display name of the restaurant */
+  name: string;
+  /** Street address of the restaurant */
+  address: string;
+  /** Distance from the search location */
+  distance: string;
+}
+
+// =============================================================================
 // Response Helpers
 // =============================================================================
 
