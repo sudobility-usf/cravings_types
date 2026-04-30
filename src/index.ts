@@ -83,6 +83,28 @@ export interface History {
   updated_at: string | null;
 }
 
+// =============================================================================
+// Restaurant
+// =============================================================================
+
+export interface Restaurant {
+  /** Name of the restaurant */
+  name: string;
+  /** Street address of the restaurant */
+  address: string;
+  /** Distance from the search location (e.g. "1.2 miles") */
+  distance: string;
+  /** 1-2 sentence summary of what the restaurant is known for */
+  summary: string;
+}
+
+export interface RestaurantSearchRequest {
+  /** The location to search near (e.g. "San Francisco") */
+  location: string;
+  /** The dish to search for (e.g. "tacos") */
+  dish: string;
+}
+
 /**
  * Request body for creating a new history record.
  *
