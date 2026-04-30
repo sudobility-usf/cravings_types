@@ -87,17 +87,33 @@ export interface History {
 // Restaurant
 // =============================================================================
 
+/**
+ * A restaurant result returned from the search endpoint.
+ *
+ * @example
+ * ```typescript
+ * const restaurant: Restaurant = {
+ *   name: 'Taqueria El Farolito',
+ *   address: '2779 Mission St, San Francisco, CA 94110',
+ *   distance: '0.3 miles',
+ *   summary: 'A Mission District staple known for its oversized burritos and late-night hours.',
+ * };
+ * ```
+ */
 export interface Restaurant {
-  /** Name of the restaurant */
+  /** Display name of the restaurant */
   name: string;
   /** Street address of the restaurant */
   address: string;
   /** Distance from the search location (e.g. "1.2 miles") */
   distance: string;
-  /** 1-2 sentence summary of what the restaurant is known for */
+  /** 1-2 sentence description of what the restaurant is known for */
   summary: string;
 }
 
+/**
+ * Request body for the restaurant search endpoint.
+ */
 export interface RestaurantSearchRequest {
   /** The location to search near (e.g. "San Francisco") */
   location: string;
